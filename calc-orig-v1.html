@@ -575,15 +575,15 @@
 
             // Calcular puntos mensuales
             let puntosMensuales = 0;
-            
-            // Inversiones: 20 puntos por millón
-            puntosMensuales += (inversiones / 1000000) * 20;
-            
-            // Crédito Hipotecario: 20 puntos por millón
-            puntosMensuales += (hipotecario / 1000000) * 20;
-            
-            // Crédito de Consumo: 100 puntos por millón
-            puntosMensuales += (consumo / 1000000) * 100;
+
+            // Inversiones: 20 puntos por millón (input ya está en millones)
+            puntosMensuales += inversiones * 20;
+
+            // Crédito Hipotecario: 20 puntos por millón (input ya está en millones)
+            puntosMensuales += hipotecario * 20;
+
+            // Crédito de Consumo: 100 puntos por millón (input ya está en millones)
+            puntosMensuales += consumo * 100;
             
             // PAC/PAT: 100 puntos cada uno, tope 1000 mensuales
             const puntosPac = Math.min(pac * 100, 1000);
